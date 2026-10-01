@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: zyro-handler-catalog-api
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev && npm test
+    startCommand: npm start
+    healthCheckPath: /health
